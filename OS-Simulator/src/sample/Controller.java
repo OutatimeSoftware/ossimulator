@@ -77,10 +77,12 @@ public class Controller implements Initializable {
     @FXML
     private void handleButtonAction(ActionEvent event) {
         //Change on Areas table
-        areasHandler(proceso, area);
+        Area newArea = areasHandler(proceso, area);
+        tablaArea.setItems(newArea);
 
         //Change on Particiones table
-        particionesHandler(proceso)
+        Particion newParticion = particionesHandler(proceso);
+        tablaArea.getItems().add(newParticion);
     }
 
     public Area areasHandler(Proceso proceso, Area area) {
@@ -121,7 +123,6 @@ public class Controller implements Initializable {
                 new Proceso("D", 6, 4, 6),
                 new Proceso("E", 14, 5, 5)
         );
-
         final ObservableList<Area> listAreas = FXCollections.observableArrayList(
                 new Area(1, 10, 54, "D")
         );
