@@ -1,0 +1,61 @@
+
+.root {
+  -fx-font-size: 12pt;
+}
+
+#anchorPaneTitle {
+    -fx-font-size: 14pt ;
+    -fx-font-weight: bold;
+}
+
+.button {
+    -fx-background-radius: 8;
+    -fx-background-color: silver;
+}
+
+.button:hover {
+    -fx-background-color: lightgray;
+}
+.button:pressed {
+    -fx-padding: 10 10 10 10;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: forestgreen;
+    -fx-text-background-color: white;
+}
+
+.table-view .table-cell{
+    -fx-border-color: transparent;
+    -fx-padding: 2 0 2 10px;
+}
+.table-row-cell: hover {
+    -fx-background-color: #93f9b911;
+    -fx-text-background-color: red;
+}
+.table-row-cell: odd{
+    -fx-background-color: white;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+.table-row-cell: even{
+    -fx-background-color: lightgreen;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+
+.table-cell {
+     -fx-alignment: BASELINE_CENTER;
+ }
+
+VBox {
+    -fx-font-weight: bold;
+    -fx-spacing: 2;
+    -fx-padding: 2;
+}
+
+Pane {
+    -fx-border-color: gray;
+    -fx-border-style: solid;
+    -fx-border-width: 0 5px 0 0;
+}

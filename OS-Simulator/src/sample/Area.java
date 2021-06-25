@@ -3,11 +3,11 @@ package sample;
 public class Area {
 
     private Integer no;
-    private Integer localidad;
-    private Integer tamano;
+    private String localidad;
+    private String tamano;
     private String estado;
 
-    public Area(Integer no, Integer localidad, Integer tamano, String estado) {
+    public Area(Integer no, String localidad, String tamano, String estado) {
         this.no = no;
         this.localidad = localidad;
         this.tamano = tamano;
@@ -22,19 +22,24 @@ public class Area {
         this.no = no;
     }
 
-    public Integer getLocalidad() {
+    public String getLocalidad() {
         return localidad;
     }
 
-    public void setLocalidad(Integer localidad) {
+    public void setLocalidad(String localidad) {
         this.localidad = localidad;
     }
 
-    public Integer getTamano() {
+    public String getTamano() {
         return tamano;
     }
 
-    public void setTamano(Integer tamano) {
+    public Integer getIntTamano() {
+        tamano = tamano.replace("K", "");
+        return Integer.valueOf(tamano);
+    }
+
+    public void setTamano(String tamano) {
         this.tamano = tamano;
     }
 

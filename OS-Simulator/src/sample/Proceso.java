@@ -3,11 +3,11 @@ package sample;
 public class Proceso {
 
     private String proceso;
-    private Integer tamano;
+    private String tamano;
     private Integer tiempo;
     private Integer duracion;
 
-    public Proceso(String proceso, Integer tamano, Integer tiempo, Integer duracion) {
+    public Proceso(String proceso, String tamano, Integer tiempo, Integer duracion) {
         this.proceso = proceso;
         this.tamano = tamano;
         this.tiempo = tiempo;
@@ -22,11 +22,16 @@ public class Proceso {
         this.proceso = proceso;
     }
 
-    public Integer getTamano() {
+    public String getTamano() {
         return tamano;
     }
 
-    public void setTamano(Integer tamano) {
+    public Integer getIntTamano() {
+        tamano = tamano.replace("K", "");
+        return Integer.valueOf(tamano);
+    }
+
+    public void setTamano(String tamano) {
         this.tamano = tamano;
     }
 
